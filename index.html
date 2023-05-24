@@ -1,0 +1,381 @@
+<!doctype html>
+<html dir="rtl" lang="fa">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>داشبورد</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/shabnam-font@v5.0.1/dist/font-face.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.rtl.min.css" />
+<style>
+body {
+	font-family: 'Shabnam', sans-serif;
+	font-size: 14px;
+	background: #f4f5f7;
+}
+
+a {
+	text-decoration: none;
+}
+
+#panel-sidebar {
+	z-index: 1;
+}
+
+#date {
+	text-shadow: 1px 1px 0px #000;
+}
+
+.border-purple {
+	border-color: #8e44ad
+}
+
+.bg-purple {
+	background: #8e44ad
+}
+
+.spring {
+	background-image: url(images/panel-spring.png);
+}
+
+.summer {
+	background-image: url(images/panel-summer.png);
+}
+
+.fall {
+	background-image: url(images/panel-fall.png);
+}
+
+.winter {
+	background-image: url(images/panel-winter.png);
+}
+</style>
+</head>
+<body>
+<div class="row g-0">
+<div id="panel-sidebar" class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-8 d-md-block d-none position-fixed top-0 start-0">
+<div class="d-flex flex-nowrap vh-100">
+<div class="d-flex flex-column align-items-stretch bg-white w-100">
+<div id="date" class="align-items-center p-3 text-center text-white spring lh-lg">
+<div>پنجشنبه، 4 خرداد 1402</div>
+<div>Thursday, 25 May 2023</div>
+<div>08:08:08</div>
+</div>
+<div class="list-group list-group-flush border-end h-100 overflow-auto">
+<a href="#" class="list-group-item list-group-item-action lh-lg active"><i class="bi bi-speedometer"></i> داشبورد</a>
+<a href="#" class="list-group-item list-group-item-action lh-lg"><i class="bi bi-person"></i> کاربران</a>
+<a href="#" class="list-group-item list-group-item-action lh-lg"><i class="bi bi-newspaper"></i> اخبار</a>
+<a href="#" class="list-group-item list-group-item-action lh-lg"><i class="bi bi-window"></i> تیکت‌ها</a>
+<a href="#" class="list-group-item list-group-item-action lh-lg"><i class="bi bi-chat-left"></i> پیامک</a>
+<a href="#" class="list-group-item list-group-item-action lh-lg"><i class="bi bi-link-45deg"></i> پیوندها</a>
+<a href="#" class="list-group-item list-group-item-action lh-lg"><i class="bi bi-images"></i> اسلایدر</a>
+<a href="#" class="list-group-item list-group-item-action lh-lg"><i class="bi bi-bell"></i> اطلاعیه‌ها</a>
+<a href="#" class="list-group-item list-group-item-action lh-lg"><i class="bi bi-share"></i> اشتراک گذاری</a>
+<a href="#" class="list-group-item list-group-item-action lh-lg"><i class="bi bi-folder"></i> فایل‌ها</a>
+<a href="#" class="list-group-item list-group-item-action lh-lg"><i class="bi bi-envelope"></i> پیام‌ها</a>
+<a href="#" class="list-group-item list-group-item-action lh-lg"><i class="bi bi-ui-checks"></i> فرم‌ها</a>
+<a href="#" class="list-group-item list-group-item-action lh-lg"><i class="bi bi-bar-chart"></i> گزارشات</a>
+<a href="#" class="list-group-item list-group-item-action lh-lg"><i class="bi bi-gear"></i> تنظیمات</a>
+<a href="#" class="list-group-item list-group-item-action lh-lg d-md-none d-block" data-bs-toggle="modal" data-bs-target="#panel-modal" data-bs-modal="confirm" data-bs-message="آیا مایل به خروج از سایت هستید؟"><i class="bi bi-power"></i> خروج</a>
+</div>
+</div>
+</div>
+</div>
+<div id="panel-content" class="col-xl-10 col-lg-9 col-md-8 position-fixed top-0 end-0">
+<div class="d-flex flex-nowrap vh-100">
+<div class="d-flex flex-column align-items-stretch w-100">
+<nav class="navbar navbar-expand-sm navbar-dark bg-primary border-bottom">
+<div class="container-fluid justify-content-start">
+<div class="text-nowrap text-truncate">
+<a class="text-white fs-5" id="sidebar-toggler" href="javascript:void(0);" title=""><i class="bi bi-list align-middle"></i></a>
+<a class="navbar-brand fw-bold ms-1 fs-6" href="#">شرکت داده پرداز رایانه سیمرغ</a>
+</div>
+<div class="collapse navbar-collapse">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item">
+<a id="fullscreen-btn" class="nav-link" href="#"><i class="bi bi-fullscreen"></i></a>
+</li>
+<li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#panel-modal" data-bs-modal="confirm" data-bs-message="آیا مایل به خروج از سایت هستید؟"><i class="bi bi-power"></i> خروج</a></li>
+</ul>
+</div>
+</div>
+</nav>
+<header class="bg-white border-bottom p-4 shadow-sm">
+<h2 class="m-0 text-truncate text-nowrap w-100"><i class="bi bi-speedometer"></i> داشبورد</h2>
+</header>
+<div class="d-flex flex-column overflow-auto h-100">
+<div class="p-3">
+<div class="row justify-content-center g-3">
+<div class="col-xl-3 col-lg-4 col-md-6">
+<div class="card border-primary shadow-sm">
+<div class="card-body bg-primary text-white">
+<div class="row align-items-center justify-content-between">
+<div class="col-auto text-nowrap text-truncate">
+<div class="h3 m-0">25</div>
+<div>کاربران آنلاین</div>
+</div>
+<div class="col-auto text-end">
+<i class="bi bi-person-workspace h1"></i>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xl-3 col-lg-4 col-md-6">
+<div class="card border-success shadow-sm">
+<div class="card-body bg-success text-white">
+<div class="row align-items-center justify-content-between">
+<div class="col-auto text-nowrap text-truncate">
+<div class="h3 m-0">7800</div>
+<div>بازدید امروز</div>
+</div>
+<div class="col-auto text-left">
+<i class="bi bi-eye-fill h1"></i>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xl-3 col-lg-4 col-md-6">
+<div class="card border-warning shadow-sm">
+<div class="card-body bg-warning text-white">
+<div class="row align-items-center justify-content-between">
+<div class="col-auto text-nowrap text-truncate">
+<div class="h3 m-0">15002563</div>
+<div>بازدید کل</div>
+</div>
+<div class="col-auto text-left">
+<i class="bi bi-bar-chart-fill h1"></i>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xl-3 col-lg-4 col-md-6">
+<div class="card border-danger shadow-sm">
+<div class="card-body bg-danger text-white">
+<div class="row align-items-center justify-content-between">
+<div class="col-auto text-nowrap text-truncate">
+<div class="h3 m-0">30000 ریال</div>
+<div>اعتبار سامانه پیامک</div>
+</div>
+<div class="col-auto text-left">
+<i class="bi bi-cash h1"></i>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xl-3 col-lg-4 col-md-6">
+<div class="card border-info shadow-sm">
+<div class="card-body bg-info text-white">
+<div class="row align-items-center justify-content-between">
+<div class="col-auto text-nowrap text-truncate">
+<div class="h3 m-0">7965</div>
+<div>کاربران سایت</div>
+</div>
+<div class="col-auto text-left">
+<i class="bi bi-people-fill h1"></i>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xl-3 col-lg-4 col-md-6">
+<div class="card border-purple shadow-sm">
+<div class="card-body bg-purple text-white">
+<div class="row align-items-center justify-content-between">
+<div class="col-auto text-nowrap text-truncate">
+<div class="h3 m-0">22</div>
+<div>پیام‌های دریافتی</div>
+</div>
+<div class="col-auto text-left">
+<i class="bi bi-envelope h1"></i>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xl-3 col-lg-4 col-md-6">
+<div class="card border-dark shadow-sm">
+<div class="card-body bg-dark text-white">
+<div class="row align-items-center justify-content-between">
+<div class="col-auto text-nowrap text-truncate">
+<div class="h3 m-0">673</div>
+<div>پیامک‌های ارسالی</div>
+</div>
+<div class="col-auto text-left">
+<i class="bi bi-send h1"></i>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xl-3 col-lg-4 col-md-6">
+<div class="card border-secondary shadow-sm">
+<div class="card-body bg-secondary text-white">
+<div class="row align-items-center justify-content-between">
+<div class="col-auto text-nowrap text-truncate">
+<div class="h3 m-0">2052</div>
+<div>پیامک‌های دریافتی</div>
+</div>
+<div class="col-auto text-left">
+<i class="bi bi-inbox h1"></i>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-12">
+<div class="alert alert-success shadow-sm">به داشبورد خوش آمدید.</div>
+<div class="card shadow-sm">
+<div class="card-body">
+<div id="visit"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer class="p-3 bg-white border-top mt-auto w-100">
+<div class="row justify-content-lg-between justify-content-center">
+<div class="col-auto text-center">کلیه حقوق مادی و معنوی این سامانه برای شرکت داده پرداز رایانه سیمرغ محفوظ می‌باشد.</div>
+<div class="col-auto text-center">اجرا و پشتیبانی: <a class="badge text-bg-primary" href="https://www.simurghdp.ir" title="شرکت داده پرداز رایانه سیمرغ" target="_blank">شرکت داده پرداز رایانه سیمرغ</a></div>
+</div>
+</footer>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-dark vh-100 vw-100 position-fixed opacity-50 d-md-none d-none" id="sidebar-overlay"></div>
+</div>
+<div class="modal fade" id="panel-modal">
+<div class="modal-dialog modal-dialog-centered">
+<div class="modal-content">
+<form action="" method="POST" enctype="multipart/form-data">
+<div class="modal-header">
+<h1 class="modal-title fw-bold fs-5"></h1>
+</div>
+<div class="modal-body"></div>
+<div class="modal-footer">
+<button type="submit" class="btn btn-primary" id="submit" name="submit">تایید</button>
+<button type="button" class="btn btn-danger" data-bs-dismiss="modal">انصراف</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script>
+$(document).ready(function () {
+	$("#sidebar-overlay").click(function() {
+		$("#sidebar-toggler").click();
+	});
+	$("#sidebar-toggler").click(function() {
+		$("#panel-sidebar").toggleClass("d-md-none d-md-block d-none");
+		$("#panel-content").toggleClass("col-xl-10 col-lg-9 col-md-8 col-xl-12 col-lg-12 col-md-12");
+		$("#sidebar-overlay").toggleClass("d-none");
+	});
+	$("#fullscreen-btn").click(function() {
+		var elem = document.documentElement;
+		if (window.fullScreen) {
+			if (document.exitFullscreen) {
+				document.exitFullscreen();
+			} else if (document.webkitExitFullscreen) {
+				document.webkitExitFullscreen();
+			} else if (document.msExitFullscreen) {
+				document.msExitFullscreen();
+			}
+		} else {
+			if (elem.requestFullscreen) {
+				elem.requestFullscreen();
+			} else if (elem.webkitRequestFullscreen) {
+				elem.webkitRequestFullscreen();
+			} else if (elem.msRequestFullscreen) {
+				elem.msRequestFullscreen();
+			}
+		}
+	});
+	$(window).on("fullscreenchange", function() {
+		$("#fullscreen-btn .bi").toggleClass("bi-fullscreen bi-fullscreen-exit");
+	});
+	$("#panel-modal").on("show.bs.modal", function(e){
+		var button = $(e.relatedTarget);
+		$('#panel-modal .modal-body').html('<div class="text-center"><div class="spinner-border spinner-border-sm" role="status"></div> در حال دریافت اطلاعات ...</div>');
+		if (typeof button.data("bs-size") !== "undefined" && button.data("bs-size") !== false) {
+			$("#panel-modal .modal-dialog").attr("class", "modal-dialog modal-dialog-centered modal-" + button.data("bs-size"));
+		} else {
+			$("#panel-modal .modal-dialog").attr("class", "modal-dialog modal-dialog-centered");
+		}
+		if (typeof button.data("bs-readonly") !== "undefined" && button.data("bs-readonly") !== false) {
+			$("#panel-modal .modal-footer .btn-primary").hide();
+			$("#panel-modal .modal-footer .btn-danger").html("بستن");
+		} else {
+			$("#panel-modal .modal-footer .btn-primary").show();
+			$("#panel-modal .modal-footer .btn-danger").html("انصراف");
+		}
+		if (button.attr("title")) {
+			$("#panel-modal .modal-title").html(button.attr("title"));
+		} else {
+			$("#panel-modal .modal-title").html("پیام سایت");
+		}
+		if (button.data("bs-modal")==="confirm") {
+			$("#panel-modal .modal-body").html(button.data("bs-message"));
+		} else {
+			$("#panel-modal .modal-body").load(button.attr("href"));
+		}
+		$("#panel-modal form").attr("action", button.attr("href"));
+	});
+	$("#panel-modal .modal-footer .btn-primary").click(function() {
+		var process = '<div class="spinner-border spinner-border-sm align-middle" role="status"></div> در حال پردازش ...';
+		$(this).html(process);
+		$(this).removeClass("btn-primary");
+		$(this).addClass("disabled");
+		$(this).addClass("btn-warning");
+		return true;
+	});
+	var value = ("; " + document.cookie).split("; admin-message=").pop().split(";")[0];
+	if (value) {
+		$("#panel-modal .modal-body").html(decodeURIComponent(value.replace(/\+/g, " ")));
+		$("#panel-modal .modal-footer .btn-danger").html("بستن");
+		$("#panel-modal .modal-footer .btn-primary").hide();
+		$("#panel-modal .modal-title").html("پیام سایت");
+		$("#panel-modal").modal("show");
+		document.cookie = "admin-message=; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
+	}
+});
+Highcharts.chart("visit", {
+	credits: {
+		enabled: false
+	}, chart: {
+		style: {
+			fontFamily: 'Shabnam'
+		}
+    }, title: {
+		text: "<strong>آمار بازدید 15 روز اخیر</strong>"
+	}, xAxis: {
+		reversed: true,
+		categories: ['۱۴۰۲/۰/۴', '۱۴۰۲/۰/۳', '۱۴۰۲/۰/۲', '۱۴۰۲/۰/۱', '۱۴۰۲/۰/۳۱', '۱۴۰۲/۰/۳۰', '۱۴۰۲/۰/۲۹', '۱۴۰۲/۰/۲۸', '۱۴۰۲/۰/۲۷', '۱۴۰۲/۰/۲۶', '۱۴۰۲/۰/۲۵', '۱۴۰۲/۰/۲۴', '۱۴۰۲/۰/۲۳', '۱۴۰۲/۰/۲۲', '۱۴۰۲/۰/۲۱']
+	}, yAxis: {
+		title: {
+			text: "<strong>بازدید</strong>"
+		}
+	}, plotOptions: {
+		series: {
+			label: {
+				connectorAllowed: false
+			}
+		}
+	}, series: [{
+		showInLegend: false,
+		data: [19, 629, 725, 791, 652, 930, 553, 421, 799, 658, 808, 783, 712, 324, 728]
+	}], tooltip: {
+		formatter: function() {
+			return this.x + ": " + this.y;
+		}
+	}
+});
+</script>
+</body>
+</html>
